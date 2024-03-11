@@ -24,7 +24,7 @@ export const fetchProducts = async (params: {
 
   try {
     const response = await fetch(
-      "http://api.valantis.store:40000/",
+      "https://api.valantis.store:41000/",
       requestOptions
     );
     if (!response.ok) {
