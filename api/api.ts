@@ -31,7 +31,6 @@ export const fetchProducts = async (params: {
       throw new Error("Ошибка при запросе к API");
     }
     const data = await response.json();
-    console.log(data.result);
 
     const correctResult: { [key: string]: Product } = data.result.reduce(
       (acc: { [key: string]: Product }, item: Product) => {
@@ -44,10 +43,7 @@ export const fetchProducts = async (params: {
       {}
     );
 
-    console.log(Object.values(correctResult));
     const correctArr = Object.values(correctResult);
-
-    console.log(correctArr);
 
     return correctArr as Product[];
   } catch (error) {
